@@ -1,0 +1,15 @@
+def majority_element(nums):
+    majority = None
+    count = 0
+    for num in nums:
+        if count == 0:
+            majority = num
+        if num == majority:
+            count += 1
+        else:
+            count -= 1
+    return majority
+
+nums = [2, 2, 1, 1, 1]
+result = majority_element(nums)
+print("Majority Element:", result)
